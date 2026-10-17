@@ -1,0 +1,1 @@
+"""Document field extractor application."""

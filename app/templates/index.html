@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document Field Extractor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">LOCAL PDF EXTRACTION</p>
+      <h1>Find document fields,<br>with evidence.</h1>
+      <p class="lede">Upload a text-native PDF and name the fields you need. Extraction runs page by page through your local <code>{{ model }}</code> model.</p>
+      <form id="extract-form">
+        <label for="pdf">PDF document</label>
+        <input id="pdf" name="pdf" type="file" accept="application/pdf,.pdf" required>
+        <label for="fields">Fields to extract <span>one per line</span></label>
+        <textarea id="fields" name="fields" rows="5" required placeholder="Invoice number&#10;Invoice date&#10;Total amount"></textarea>
+        <button type="submit">Extract fields</button>
+      </form>
+      <p id="status" role="status"></p>
+      <section id="results" hidden aria-live="polite">
+        <div class="results-header"><h2>Results</h2><span id="meta"></span></div>
+        <div id="cards"></div>
+      </section>
+      <p class="note">Values without a verbatim page quote are discarded. Scanned PDFs need OCR before this prototype can process them.</p>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
