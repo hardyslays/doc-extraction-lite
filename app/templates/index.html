@@ -4,18 +4,81 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document Field Extractor</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("theme");
+          const theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/static/styles.css?v=dark-mode">
   </head>
   <body>
     <main>
-      <p class="eyebrow">LOCAL PDF EXTRACTION</p>
+      <div class="masthead">
+        <p class="eyebrow">LOCAL PDF EXTRACTION</p>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-label">Theme</span>
+        </button>
+      </div>
       <h1>Find document fields,<br>with evidence.</h1>
-      <p class="lede">Upload a text-native PDF and name the fields you need. Extraction runs page by page through your local <code>{{ model }}</code> model.</p>
+      <p class="lede">Upload a PDF and choose the values to extract. V2 reads each page using native text or structured OCR, then returns values with source evidence.</p>
+      <h2>V2 structured extraction</h2>
+      <form id="v2-form">
+        <label for="v2-pdf">PDF document</label>
+        <input id="v2-pdf" name="pdf" type="file" accept="application/pdf,.pdf" required>
+        <label for="v2-model">Extraction model</label>
+        <select id="v2-model" name="model">
+          <option value="{{ v2_models[0] }}">NuExtract-1.5-tiny · CPU default</option>
+          <option value="{{ v2_models[1] }}">NuExtract-1.5-smol · larger CPU model</option>
+          <option value="{{ v2_models[2] }}">NuExtract3 · may exceed two minutes on CPU</option>
+        </select>
+        <label for="v2-input-mode">Input format</label>
+        <select id="v2-input-mode">
+          <option value="template">JSON template</option>
+          <option value="fields">Field names, one per line</option>
+        </select>
+        <label id="v2-template-label" for="v2-template">JSON template</label>
+        <textarea id="v2-template" name="template" rows="9" required>{
+  "invoice_number": "verbatim-string",
+  "invoice_date": "date",
+  "total": "number",
+  "line_items": [{"description": "verbatim-string", "quantity": "integer", "amount": "number"}]
+}</textarea>
+        <label id="v2-fields-label" for="v2-fields" hidden>Fields to extract</label>
+        <textarea id="v2-fields" name="fields" rows="5" placeholder="Invoice number&#10;Invoice date&#10;Total amount" hidden disabled></textarea>
+        <label class="ocr-option" for="v2-force-ocr">
+          <input id="v2-force-ocr" name="force_ocr" type="checkbox" value="true">
+          <span><strong>Force structured OCR</strong><small>Use the scanned-page path for every page.</small></span>
+        </label>
+        <button type="submit">Extract structured data</button>
+      </form>
+      <p id="v2-status" role="status"></p>
+      <section id="v2-results" hidden aria-live="polite">
+        <div class="results-header"><h2>Structured result</h2><span id="v2-meta"></span></div>
+        <pre id="v2-data"></pre>
+        <div id="v2-evidence"></div>
+      </section>
+      <details class="legacy"><summary>Use the original v1 extractor</summary>
       <form id="extract-form">
         <label for="pdf">PDF document</label>
         <input id="pdf" name="pdf" type="file" accept="application/pdf,.pdf" required>
+        <label for="model">Extraction model</label>
+        <select id="model" name="model">
+          <option value="{{ models[0] }}">NuExtract-1.5-tiny · 0.5B</option>
+          <option value="{{ models[1] }}">NuExtract3 · 4B-class, slower</option>
+        </select>
         <label for="fields">Fields to extract <span>one per line</span></label>
         <textarea id="fields" name="fields" rows="5" required placeholder="Invoice number&#10;Invoice date&#10;Total amount"></textarea>
+        <label class="ocr-option" for="force-ocr">
+          <input id="force-ocr" name="force_ocr" type="checkbox" value="true">
+          <span><strong>Force OCR</strong><small>Render and read every page with the local PP-OCRv6 model.</small></span>
+        </label>
         <button type="submit">Extract fields</button>
       </form>
       <p id="status" role="status"></p>
@@ -23,8 +86,9 @@
         <div class="results-header"><h2>Results</h2><span id="meta"></span></div>
         <div id="cards"></div>
       </section>
-      <p class="note">Values without a verbatim page quote are discarded. Scanned PDFs need OCR before this prototype can process them.</p>
+      <p class="note">Values without a verbatim page quote are discarded. Pages without selectable text are OCRed locally with PP-OCRv6. Model weights are downloaded on first use.</p>
+      </details>
     </main>
-    <script src="/static/app.js"></script>
+    <script src="/static/app.js?v=background-jobs"></script>
   </body>
 </html>

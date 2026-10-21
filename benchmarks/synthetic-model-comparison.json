@@ -1,0 +1,551 @@
+{
+  "v2/docling/numind/NuExtract-1.5-tiny": {
+    "summary": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_answer_rate": 0.0,
+      "shared_precision": 1.0,
+      "shared_recall": 1.0,
+      "evidence_errors": 0,
+      "p50_seconds": 6.577436040985049,
+      "p95_seconds": 10.13178536601481,
+      "peak_rss_mb": 3011.41796875,
+      "failures": 0
+    },
+    "records": [
+      {
+        "fixture": "native",
+        "seconds": 5.311628716008272,
+        "peak_rss_mb": 1538.046875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "scanned",
+        "seconds": 10.13178536601481,
+        "peak_rss_mb": 2879.8671875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "mixed",
+        "seconds": 7.132335149974097,
+        "peak_rss_mb": 2929.83203125,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "hybrid_page",
+        "seconds": 7.159946076979395,
+        "peak_rss_mb": 2934.45703125,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "table",
+        "seconds": 6.022536931996001,
+        "peak_rss_mb": 2934.45703125,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "scanned_table",
+        "seconds": 8.70599291101098,
+        "peak_rss_mb": 3011.41796875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "rotated",
+        "seconds": 5.98425886197947,
+        "peak_rss_mb": 3011.41796875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "empty",
+        "seconds": 0.0007341120217461139,
+        "peak_rss_mb": 3011.41796875,
+        "score": {
+          "correct": 0,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 0,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 0,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 0,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "malformed",
+        "expected_failure": "WorkerError"
+      }
+    ]
+  },
+  "v2/docling/numind/NuExtract-1.5-smol": {
+    "summary": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_answer_rate": 0.0,
+      "shared_precision": 1.0,
+      "shared_recall": 1.0,
+      "evidence_errors": 0,
+      "p50_seconds": 18.43553520500427,
+      "p95_seconds": 21.638425579993054,
+      "peak_rss_mb": 5371.2109375,
+      "failures": 0
+    },
+    "records": [
+      {
+        "fixture": "native",
+        "seconds": 14.385408906993689,
+        "peak_rss_mb": 3821.5703125,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "scanned",
+        "seconds": 21.638425579993054,
+        "peak_rss_mb": 5177.8046875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "mixed",
+        "seconds": 18.754586157010635,
+        "peak_rss_mb": 5215.46875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "hybrid_page",
+        "seconds": 19.019526643009158,
+        "peak_rss_mb": 5215.46875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "table",
+        "seconds": 18.116484252997907,
+        "peak_rss_mb": 5215.46875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "scanned_table",
+        "seconds": 20.63223684800323,
+        "peak_rss_mb": 5371.2109375,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "rotated",
+        "seconds": 17.66709990100935,
+        "peak_rss_mb": 5371.2109375,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "empty",
+        "seconds": 0.0006354560027830303,
+        "peak_rss_mb": 5371.2109375,
+        "score": {
+          "correct": 0,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 0,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 0,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 0,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "malformed",
+        "expected_failure": "WorkerError"
+      }
+    ]
+  },
+  "v1/numind/NuExtract-1.5-tiny": {
+    "summary": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_answer_rate": 0.0,
+      "shared_precision": 1.0,
+      "shared_recall": 1.0,
+      "evidence_errors": 0,
+      "p50_seconds": 2.0780007379944436,
+      "p95_seconds": 5.37871226601419,
+      "peak_rss_mb": 2822.10546875,
+      "failures": 1
+    },
+    "records": [
+      {
+        "fixture": "native",
+        "seconds": 2.032878277997952,
+        "peak_rss_mb": 1607.1796875,
+        "score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        }
+      },
+      {
+        "fixture": "scanned",
+        "seconds": 5.37871226601419,
+        "peak_rss_mb": 2735.5703125,
+        "score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        }
+      },
+      {
+        "fixture": "mixed",
+        "seconds": 2.7899906420207117,
+        "peak_rss_mb": 2754.66015625,
+        "score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        }
+      },
+      {
+        "fixture": "hybrid_page",
+        "seconds": 1.6873952949827071,
+        "peak_rss_mb": 2754.66015625,
+        "score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        }
+      },
+      {
+        "fixture": "table",
+        "seconds": 2.0780007379944436,
+        "peak_rss_mb": 2754.66015625,
+        "score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        }
+      },
+      {
+        "fixture": "scanned_table",
+        "seconds": 3.619214905978879,
+        "peak_rss_mb": 2822.10546875,
+        "score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        }
+      },
+      {
+        "fixture": "rotated",
+        "seconds": 2.0454895809816662,
+        "peak_rss_mb": 2822.10546875,
+        "score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        }
+      },
+      {
+        "fixture": "empty",
+        "error": "HTTPException"
+      },
+      {
+        "fixture": "malformed",
+        "expected_failure": "HTTPException"
+      }
+    ]
+  }
+}

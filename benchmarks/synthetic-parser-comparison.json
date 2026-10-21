@@ -1,0 +1,122 @@
+{
+  "v2/docling/numind/NuExtract-1.5-tiny": {
+    "summary": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_answer_rate": 0.0,
+      "shared_precision": 1.0,
+      "shared_recall": 1.0,
+      "evidence_errors": 0,
+      "p50_seconds": 8.071026909005013,
+      "p95_seconds": 10.836793604015838,
+      "peak_rss_mb": 2913.89453125,
+      "failures": 0
+    },
+    "records": [
+      {
+        "fixture": "native",
+        "seconds": 5.305260213994188,
+        "peak_rss_mb": 1538.18359375,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "scanned_table",
+        "seconds": 10.836793604015838,
+        "peak_rss_mb": 2913.89453125,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      }
+    ]
+  },
+  "v2/ppstructure/numind/NuExtract-1.5-tiny": {
+    "summary": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_answer_rate": 0.0,
+      "shared_precision": 1.0,
+      "shared_recall": 1.0,
+      "evidence_errors": 0,
+      "p50_seconds": 10.159701330005191,
+      "p95_seconds": 14.973428803001298,
+      "peak_rss_mb": 3475.71875,
+      "failures": 0
+    },
+    "records": [
+      {
+        "fixture": "native",
+        "seconds": 5.345973857009085,
+        "peak_rss_mb": 1855.74609375,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      },
+      {
+        "fixture": "scanned_table",
+        "seconds": 14.973428803001298,
+        "peak_rss_mb": 3475.71875,
+        "score": {
+          "correct": 6,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 6,
+          "evidence_errors": 0
+        },
+        "shared_score": {
+          "correct": 3,
+          "wrong": 0,
+          "missed": 0,
+          "supported": 3,
+          "evidence_errors": 0
+        },
+        "ocr_errors": 0,
+        "table_errors": 0,
+        "complete": true
+      }
+    ]
+  }
+}
